@@ -114,6 +114,7 @@ const FILTER_PRESENTATIONS = {
   Redirect: { title: "Redirects", icon: "link" },
   SearchResults: { title: "Search results", icon: "lens" },
   Video: { title: "Videos", icon: "video" },
+  ShawnTestPage: {title: "ShawnTestPage", icon:"user"},
 };
 
 const PAGES = [
@@ -127,4 +128,5 @@ const PAGES = [
   "Homepage",
   "Blog",
   "SearchResults",
+  "ShawnTestPage"
 ];
