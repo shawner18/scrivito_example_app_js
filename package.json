@@ -47,6 +47,7 @@
     "generator-scrivito": "file:generator-scrivito",
     "history": "^4.10.1",
     "html-webpack-plugin": "^4.3.0",
+    "http-server": "^0.12.3",
     "is-empty": "^1.2.0",
     "jquery": "^3.5.1",
     "js-md4": "^0.3.2",
@@ -83,7 +84,8 @@
   },
   "scripts": {
     "build": "webpack -p",
-    "prerender": "SCRIVITO_PRERENDER=true npm run build && node prerender/storePrerenderedContent.js",
+    "prerender": "set SET SCRIVITO_PRERENDER=true&& npm run build&& node prerender/storePrerenderedContent.js",
+    "startPrerender": "http-server buildPrerendered",
     "start": "webpack-dev-server --open",
     "eslint": "eslint --max-warnings 0 src/ prerender/",
     "es-check": "npm run build && es-check es5 './build/**/*.js'"
