@@ -134,6 +134,8 @@ function webpackConfig(env = {}) {
           { from: /./, to: "/catch_all_index.html" },
         ],
       },
+      contentBase: isPrerendering ? path.join(__dirname, 'buildPrerendered') : "/",
+
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Content-Security-Policy": devServerCspHeader(),
@@ -207,7 +209,7 @@ function generatePlugins({ isProduction, isPrerendering, scrivitoOrigin }) {
 
   if (!isProduction || isPrerendering) {
     plugins.push(new ManifestPlugin({ fileName: "asset-manifest.json" }));
-  }
+   }
 
   if (isProduction) {
     plugins.unshift(new CleanWebpackPlugin());
