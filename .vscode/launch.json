@@ -7,15 +7,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "npm build",
+            "name": "Launch Program",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run", "build", "debug"
-            ],
+            "program": "${workspaceFolder}\\--open"
         }
     ]
 }
